@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+body{
+    background: #333;
+}
+.nav-item{
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.nav-item:hover{
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.active{
+    background: linear-gradient(90deg, rgba(252, 248, 4, 0.5) 30%, rgba(115, 231, 131, 0.5) 100% );
+    border-radius: 40% 56% 80% 10% / 42% 42% 56% 48%;
+    width: 95px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: morph 3.70s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes morph {
+    0%, 100% {
+        border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    }
+    33% {
+        border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+    66% {
+        border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+    }
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cam-web{
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 380px;
 }
